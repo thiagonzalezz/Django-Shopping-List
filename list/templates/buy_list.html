@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Buy list</h1>
+    {% if lists %}
+        {% for list in lists %}
+            <ul>
+                <li>{{list.item}}</li>
+            </ul>
+        {% endfor %}
+    {% else %}
+        <h3>No items in the buy list yey</h3>
+    {% endif %}
+{% endblock %}
